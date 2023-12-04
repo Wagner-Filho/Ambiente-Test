@@ -32,5 +32,8 @@ public class PlayerController : MonoBehaviour
             playerAnimator.SetFloat("input_y", input_y);
         }
         playerAnimator.SetBool("isWalking", isWalking);
+
+        if (Input.GetButtonDown("Fire1"))
+            playerAnimator.SetTrigger("attack");
     }
 }
