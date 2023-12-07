@@ -19635,7 +19635,7 @@ MonoBehaviour:
     speed: 1.5
   health: {fileID: 940766264}
   mana: {fileID: 976657637}
-  stamina: {fileID: 0}
+  stamina: {fileID: 1654124920}
   exp: {fileID: 1370679498}
 --- !u!1 &721007388
 GameObject:
