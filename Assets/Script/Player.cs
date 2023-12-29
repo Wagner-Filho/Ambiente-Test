@@ -33,12 +33,9 @@ public class Player : MonoBehaviour
             return;
         }
 
-        entity.maxHealth = manager.CalculateHealth(this);
-        entity.maxMana = manager.CalculateMana(this);
-        entity.maxStamina = manager.CalculateStamina(this);
-
-        int dmg = manager.CalculateDamage(this, 10); // ser usado no player
-        int def = manager.CalculateDefense(this, 5); // ser usado no inimigo
+        entity.maxHealth = manager.CalculateHealth(entity);
+        entity.maxMana = manager.CalculateMana(entity);
+        entity.maxStamina = manager.CalculateStamina(entity);
 
         entity.currentHealth = entity.maxHealth;
         entity.currentHealth = entity.maxHealth;
@@ -67,13 +64,6 @@ public class Player : MonoBehaviour
         health.value = entity.currentHealth;
         mana.value = entity.currentMana;
         stamina.value = entity.currentStamina;
-
-        // attack teste - perda de vida
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            entity.currentHealth -= 10;
-            entity.currentMana -= 5;
-        }
     }
 
     IEnumerator RegenHealth()
