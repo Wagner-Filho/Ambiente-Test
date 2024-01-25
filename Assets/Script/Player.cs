@@ -61,6 +61,15 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+
+        if (entity.dead)
+            return;
+
+        if(entity.currentHealth <= 0)
+        {
+            Die();
+        }
+
         health.value = entity.currentHealth;
         mana.value = entity.currentMana;
         stamina.value = entity.currentStamina;
@@ -105,5 +114,12 @@ public class Player : MonoBehaviour
                 }
             }
         }
+    }
+    void Die()
+    {
+        entity.currentHealth = 0;
+        entity.dead = true;
+        entity.target = null;
+        StopAllCoroutines();
     }
 }

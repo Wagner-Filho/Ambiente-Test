@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5271575464898404363}
   - component: {fileID: 5000597990925849866}
   - component: {fileID: 7757181038425440521}
+  - component: {fileID: 6620557009704194545}
+  - component: {fileID: 2169008109011870643}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -180,3 +182,83 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34375, y: 0.71875}
   m_EdgeRadius: 0
+--- !u!70 &6620557009704194545
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954980795037003465}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.8, y: 2.8}
+  m_Direction: 0
+--- !u!114 &2169008109011870643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954980795037003465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d78ad4eefa6034dbb8d6c7dc3f1397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entity:
+    name: Skelleton
+    level: 1
+    currentHealth: 100
+    maxHealth: 100
+    currentMana: 100
+    maxMana: 100
+    currentStamina: 100
+    maxStamina: 100
+    strength: 2
+    resistence: 2
+    intelligence: 1
+    willpower: 1
+    damage: 2
+    defense: 2
+    speed: 3
+    attackDistance: 0.5
+    attackTimer: 1
+    cooldown: 2
+    inCombat: 0
+    target: {fileID: 0}
+    combatCoroutine: 0
+    dead: 0
+  manager: {fileID: 0}
+  waypointList: []
+  arrivalDistance: 0.5
+  waitTime: 5
+  rewardExperiense: 10
+  lootGoldMax: 10
+  lootGoldMin: 0
+  prefab: {fileID: 5954980795037003465}
+  respawn: 1
+  respawnTime: 10
